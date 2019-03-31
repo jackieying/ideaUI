@@ -51,5 +51,26 @@ public class Test {
 
         System.out.println(d % (int)(Math.pow(2, n)));
         System.out.println(d & ((int)(Math.pow(2, n) - 1)));
+
+        StringBuffer string = new StringBuffer("hello");
+//        System.out.println(string.substring(1,3));
+
+        int aa = 1;
+        System.out.println(aa++ + ++aa);
+//        System.out.println(++aa + aa++);
+        System.out.println(aa);
+
+        switch (1){
+            case 1:
+                string.append("1");
+//                break;
+            case 2:
+                string.append("2");
+            case 3:
+                string.append("3");
+            default:
+                string.append("4");
+        }
+        System.out.println(string);
     }
 }
