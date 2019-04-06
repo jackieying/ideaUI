@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Test {
 
@@ -7,13 +8,13 @@ public class Test {
     private int size;
 
     public int getSize() {
-        return size+1;
+        return size + 1;
     }
 
-    static void voidTest(){
+    static void voidTest() {
     }
 
-    public static void main(String[] args) throws NegativeArraySizeException{
+    public static void main(String[] args) throws NegativeArraySizeException {
 
         /*try{
             String[] negativeArraySize = new String[-1];
@@ -43,14 +44,14 @@ public class Test {
         int n = 4;
         System.out.println(a % (2 ^ n) == (a & ((2 ^ n) - 1)));
 
-        System.out.println((int)(Math.pow(2, n)));
-        System.out.println(a & (int)(Math.pow(2, n) - 1));
+        System.out.println((int) (Math.pow(2, n)));
+        System.out.println(a & (int) (Math.pow(2, n) - 1));
 
-        System.out.println(c % (int)(Math.pow(2, n)) );
-        System.out.println(c & ((int)(Math.pow(2, n) - 1)));
+        System.out.println(c % (int) (Math.pow(2, n)));
+        System.out.println(c & ((int) (Math.pow(2, n) - 1)));
 
-        System.out.println(d % (int)(Math.pow(2, n)));
-        System.out.println(d & ((int)(Math.pow(2, n) - 1)));
+        System.out.println(d % (int) (Math.pow(2, n)));
+        System.out.println(d & ((int) (Math.pow(2, n) - 1)));
 
         StringBuffer string = new StringBuffer("hello");
 //        System.out.println(string.substring(1,3));
@@ -60,7 +61,7 @@ public class Test {
 //        System.out.println(++aa + aa++);
         System.out.println(aa);
 
-        switch (1){
+        switch (1) {
             case 1:
                 string.append("1");
 //                break;
@@ -72,5 +73,18 @@ public class Test {
                 string.append("4");
         }
         System.out.println(string);
+
+        String str1 = "abc";
+        String str = "abc";
+        String str2 = new String("abc");
+        System.out.println(str1 == str2);
+        System.out.println(str1 == str);
+
+
+        AtomicInteger integer = new AtomicInteger(5);
+        System.out.println((integer.get() % 3) == 0);
+        System.out.println(integer);
     }
+
+
 }
