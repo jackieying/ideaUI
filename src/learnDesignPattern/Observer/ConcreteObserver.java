@@ -1,4 +1,4 @@
-package learnDesignPattern.ObserverPatten;
+package LearnDesignPattern.Observer;
 
 public class ConcreteObserver extends Observer {
 
