@@ -10,6 +10,8 @@ public class LRUCacheLinked {
     public LRUCacheLinked(int capacity) {
         this.capacity = capacity;
         this.cache = new java.util.LinkedHashMap<Integer, Integer> (capacity, 0.75f, true) {
+
+            @Override
             // 定义put后的移除规则，大于容量就删除eldest
             protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest) {
                 return size() > capacity;
@@ -20,8 +22,9 @@ public class LRUCacheLinked {
     public int get(int key) {
         if (cache.containsKey(key)) {
             return cache.get(key);
-        } else
+        } else{
             return -1;
+        }
     }
 
     public void set(int key, int value) {
