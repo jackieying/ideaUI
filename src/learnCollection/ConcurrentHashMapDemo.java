@@ -3,9 +3,7 @@ package learnCollection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class ConcurrentHashMapDemo
-
-{
+public class ConcurrentHashMapDemo {
 
     private Map<Integer, Integer> cache = new ConcurrentHashMap<>(15);
 
@@ -18,10 +16,10 @@ public class ConcurrentHashMapDemo
         if (i == 0 || i == 1) {
             return i;
         }
-        return cache.computeIfAbsent(i, (key) ->{
+        return cache.computeIfAbsent(i, (key) -> {
             System.out.println("fibonaacci : " + key);
-                    return fibonaacci(key - 1) + fibonaacci(key - 2);
-            });
+            return fibonaacci(key - 1) + fibonaacci(key - 2);
+        });
 
     }
 
