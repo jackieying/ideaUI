@@ -2,7 +2,7 @@ package learnExtends;
 
 public class Father {
     static {
-        System.out.println("father staticd");
+        System.out.println("father static");
     }
 
     public Father(){
@@ -10,7 +10,7 @@ public class Father {
     }
 
     protected void doSomething(){
-        System.out.println("Father's doSomethingdddddd");
+        System.out.println("Father's doSomething");
 //        this.doSomething();
     }
 
@@ -22,7 +22,7 @@ public class Father {
 
 class Son extends Father{
     static {
-        System.out.println("son staticddddd");
+        System.out.println("son static");
     }
 
     public Son(){
